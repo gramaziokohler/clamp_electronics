@@ -1,13 +1,13 @@
 # TODO
 
-- [ ] Document Radio Module
+- [x] Document Radio Module
 - [ ] Document First Clamp Controller
   - [ ] Schematic
   - [ ] Write up
   - [ ] Photo
 - [ ] Document Second Clamp Controller
-  - [ ] Schematic
-  - [ ] Write up
+  - [x] Schematic
+  - [x] Write up
   - [ ] Photo
 - [ ] Clarify Motor Controller Direction Truth Table
 - [ ] Photograph the two controllers

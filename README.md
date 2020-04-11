@@ -1,7 +1,9 @@
 # clamp_electronics
-Electronics for remote controlled robotic clamps
+Electronics for remote controlled robotic actuators (clamps). 
 
-The goal of the clamp controller is to be able to achieve the following high-level functions:
+## Design Goals
+
+The goal of the clamp controller is to be able to achieve the following high-level functions: 
 
 - Communicate wirelessly with a radio base station
   - Receive commands
@@ -20,7 +22,7 @@ The goal of the clamp controller is to be able to achieve the following high-lev
 
 ## Controller Design
 
-This repository hold Eagle schematics and board designs.
+This repository hold Eagle schematics and board designs for different controller design. Not all designs implemented the full list of design goals.
 
 ### [01_SerialController]()
 
@@ -30,7 +32,7 @@ This controller receives command from Serial Tx Rx pins.
 
 This controller interfaces the CC1101 radio directly via Hardware SPI on Arduino Nano. It can receive and respond to commands from either USB Serial or from the Radio.
 
-The hardware and pin out supports two motors being PID controlled.
+The hardware and pin out supports two motors being PID controlled with encoder feedback.
 
 ## Sub-systems and Electronic Modules
 
@@ -59,7 +61,7 @@ Radio frequency / channel / sync word and it's operation is controlled by softwa
 
 ### MCU
 
-The Arduino Nano is chosen for its small size, low cost and protoboard friendly pin layout. The Nano do not have a lot of IO available but is barely enough for a 2 motor controller.
+The Arduino Nano (ATmega328 + new bootloader) is chosen for its small size, low cost and protoboard friendly pin layout. The Nano do not have a lot of IO available but is barely enough for a 2 motor controller.
 
 [Arduino Nano V3 Pinout](http://lab.dejaworks.com/arduino-nano-pinouts/) ( [Arduino.cc Nano Page](https://store.arduino.cc/arduino-nano) )
 
