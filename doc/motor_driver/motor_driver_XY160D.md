@@ -1,16 +1,23 @@
 # XY-160D motor driving board
 
 **Motor Power Input Voltage** DC 6.5V - 27V
+
 **Digital Power Input Voltage** DC 5V
 
 **Number of Channels:** 2
+
 **Max continuous output current:**  7A (Per Channel)
-**Peak output current**: 50A.
+
+**Peak output current**: 50A
+
 **PWM frequency range** 0-10 kHz (PWM signal at ENA input is used to regulate speed)
+
 **Minimum pulse width:** 5us.
 
 **Control signal Level (Compatible 3.3V/5V)**
+
 **Logic High (H):** DC 3.0 ~ 6.5V
+
 **Logic Low (L):** DC0 ~ 0.8V
 
 | Pin Function                    | Label          | Connection          |
