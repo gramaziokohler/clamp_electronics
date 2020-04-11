@@ -1,6 +1,16 @@
 # clamp_electronics
 Electronics for remote controlled robotic actuators (clamps). 
 
+This repo is part of the [Robotic Assembled Timber Structures with Integral Timber Joints](https://github.com/gramaziokohler/integral_timber_joints) project. 
+
+## Repo folder structure
+
+This repository hold the following files:
+
+- **/xx_Description** - Eagle schematics and board designs for a specific controller design
+- **/eagle_library** - stores custom eagle libraries from third-party or created by myself
+- **/doc** - Electronics modules and other components documentation from original manufactures.
+
 ## Design Goals
 
 The goal of the clamp controller is to be able to achieve the following high-level functions: 
@@ -22,7 +32,7 @@ The goal of the clamp controller is to be able to achieve the following high-lev
 
 ## Controller Design
 
-This repository hold Eagle schematics and board designs for different controller design. Not all designs implemented the full list of design goals.
+Not all designs implemented the full list of design goals.
 
 ### [01_SerialController]()
 
@@ -34,7 +44,7 @@ This controller interfaces the CC1101 radio directly via Hardware SPI on Arduino
 
 The hardware and pin out supports two motors being PID controlled with encoder feedback.
 
-## Sub-systems and Electronic Modules
+## Sub-systems and Electronic Module Documentation
 
 ### Motor Driver
 
@@ -120,3 +130,9 @@ Sensor resolution should be around 500 - 1000 steps per 1mm clamp linear output.
 **Voltage Assumption for calculation**: We assume a fully charged 4-cell battery to have **16.8V (@4.2V)**, and stop using the battery at **14.8V (@3.7V)**  , although absolute minimum is **14.0V (@3.5V)**
 
 Note: 3-cell battery will also operate fine but at reduced torque
+
+Credits
+-------------
+
+This repository was created by Pok Yin Victor Leung <leung@arch.ethz.ch> [@yck011522 ](https://github.com/yck011522) at [@gramaziokohler](https://github.com/gramaziokohler)
+
