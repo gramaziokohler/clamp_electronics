@@ -36,7 +36,7 @@ The hardware and pin out supports two motors being PID controlled.
 
 ### Motor Driver
 
-[Motor Driver XY160D](doc\motor_driver\motor_driver_XY160D.md)
+[Motor Driver XY160D](doc/motor_driver/motor_driver_XY160D.md)
 
 This H-Bridge Bi-Directional MOSFET motor driver is chosen due to its high rated current (7A constant, 50A peak).  
 
@@ -46,7 +46,7 @@ This H-Bridge Bi-Directional MOSFET motor driver is chosen due to its high rated
 
 ### Radio
 
-[Details of CC1101 Radio Module](doc\radio\CC1101_Radio.md)
+[Details of CC1101 Radio Module](doc/radio/CC1101_Radio.md)
 
 This CC1101 radio module is chosen because it is the most available sub-GHz packet based radio.
 
@@ -67,11 +67,11 @@ The Arduino Nano is chosen for its small size, low cost and protoboard friendly 
 
 The fluctuating battery voltage for a 4-cell Li-Po is between 12.8V to 16.8V. This needs to be regulated to stable 5V DC for the digital circuitry.
 
-[Details and calculation of LM7805 option](doc\voltage_regulation\linear_regulator.md)
+[Details and calculation of LM7805 option](doc/voltage_regulation/linear_regulator.md)
 
 ### Battery Voltage Sense
 
-[Details and calculation of voltage divider](doc\battery_sense\Battery_Voltage_Sensing.md)
+[Details and calculation of voltage divider](doc/battery_sense/Battery_Voltage_Sensing.md)
 
 ### Battery Cable Harness
 
