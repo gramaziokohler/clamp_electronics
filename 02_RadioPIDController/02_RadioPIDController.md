@@ -29,9 +29,11 @@ This clamp controller can achieve the following goal (with proper firmware):
 
 **Addressing / Settings DIP Switch:** 4 position DIP switch with resistor ladder
 
+**End Switch Choice:** Normal close (NC) switch
+
 ## Schematic
 
-[Original Eagle Schematic File](Controller.sch)
+[Eagle Schematic File](Controller.sch)
 
 ![schematic](schematic.jpg)
 
@@ -39,7 +41,7 @@ This clamp controller can achieve the following goal (with proper firmware):
 
 This board is built on **protoboard**, the following board shows mostly the hard wiring underneath the protoboard. There are jumpers that routes from top side not drawn here.
 
-[Original Eagle Board File](Controller.brd)
+[Eagle Board File](Controller.brd)
 
 ![board](board.jpg)
 

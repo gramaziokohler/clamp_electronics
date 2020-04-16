@@ -44,7 +44,7 @@ The design supports two DC motors with *single* channel encoder. The shaft rotat
 
 This controller interfaces the CC1101 radio directly via Hardware SPI on Arduino Nano. It can receive and respond to commands from either USB Serial or from the Radio.
 
-The hardware and pin out supports two motors being PID controlled with encoder feedback.
+The hardware and pin out supports two motors being PID controlled with two-channel encoder feedback.
 
 ## Sub-systems and Electronic Module Documentation
 
