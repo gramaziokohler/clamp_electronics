@@ -43,7 +43,20 @@ This board is built on **protoboard**, the following board shows mostly the hard
 
 ![board](board.jpg)
 
+## Photo
+
+The Controller in enclosed case with plugged in battery. The disconnected cables goes to DC motor with encoder.
+
+![Photo_WithCoverTop](Photo_WithCoverTop.jpg)
+
+------
+
+Arduino Nano and radio module (Blue PCB with antenna) on protoboard. The Motor driver (red PCB) can be  seen below the protoboard. 
+
+![Photo_OffCover](Photo_OffCover.jpg)
+
 ## Arduino Pin Assignment
 
 The following header file can be used for pin assignment
 
+(TODO)
