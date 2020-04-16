@@ -28,13 +28,11 @@ The goal of the clamp controller is to be able to achieve the following high-lev
 - Monitor end / homing switch
 - Monitor battery voltage
 
-
-
 ## Controller Design
 
 Not all designs implemented the full list of design goals.
 
-### [01_SerialController]()
+### [01_SerialController](/01_SerialController/01_SerialController.md)
 
 This controller receives command from Serial Tx Rx pins.
 
