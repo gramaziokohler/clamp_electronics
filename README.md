@@ -38,6 +38,10 @@ Not all designs implemented the full list of design goals.
 
 This controller receives command from Serial Tx Rx pins.
 
+Two load cell can be connected via two HX711 Analog-to_Digital Module.
+
+The design supports two DC motors with *single* channel encoder. The shaft rotation direction is inferred from the direction of programmed movement. (This design is later proved to be imprecise)
+
 ### [02_RadioPIDController](02_RadioPIDController/02_RadioPIDController.md)
 
 This controller interfaces the CC1101 radio directly via Hardware SPI on Arduino Nano. It can receive and respond to commands from either USB Serial or from the Radio.
@@ -74,6 +78,14 @@ Radio frequency / channel / sync word and it's operation is controlled by softwa
 The Arduino Nano (ATmega328 + new bootloader) is chosen for its small size, low cost and protoboard friendly pin layout. The Nano do not have a lot of IO available but is barely enough for a 2 motor controller.
 
 [Arduino Nano V3 Pinout](http://lab.dejaworks.com/arduino-nano-pinouts/) ( [Arduino.cc Nano Page](https://store.arduino.cc/arduino-nano) )
+
+### Load Cell
+
+A 4-wire load cell can be used to dynamically measure the pull force of the actuator. Such load cell can be interfaced to the Arduino via a AD Converter designed for load cell measurement.
+
+[Details of the HX711 Load Cell A/D Module](/doc/load_cell/load_cell.md)
+
+The HX711 module was selected due to its compact size, low cost and ready-to-use library. Measuring frequency is 80Hz.
 
 ### Battery Voltage Regulation for controller
 
