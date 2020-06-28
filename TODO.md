@@ -5,10 +5,10 @@
   - [ ] Schematic
   - [ ] Write up
   - [ ] Photo
-- [ ] Document Second Clamp Controller
+- [x] Document Second Clamp Controller
   - [x] Schematic
   - [x] Write up
-  - [ ] Photo
+  - [x] Photo
 - [ ] Clarify Motor Controller Direction Truth Table
 - [ ] Photograph the two controllers
   - [ ] Controller 01 

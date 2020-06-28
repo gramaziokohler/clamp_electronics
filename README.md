@@ -26,6 +26,7 @@ The goal of the clamp controller is to be able to achieve the following high-lev
 - Monitor jamming conditions of the clamp
 - Monitor sensors (if any, such as loadcells)
 - Monitor end / homing switch
+- Monitor pneumatic autoswitch
 - Monitor battery voltage
 
 ## Controller Design
@@ -45,6 +46,14 @@ The design supports two DC motors with *single* channel encoder. The shaft rotat
 This controller interfaces the CC1101 radio directly via Hardware SPI on Arduino Nano. It can receive and respond to commands from either USB Serial or from the Radio.
 
 The hardware and pin out supports two motors being PID controlled with two-channel encoder feedback.
+
+### [03_RadioPIDControllerV2](03_RadioPIDControllerV2/03_RadioPIDControllerV2.md)
+
+This controller is an improvement of the 02_RadioPIDController with the intent to improve the following aspects:
+
+- Better DC power regulation to avoid digital blackout
+- Ability to support a two-motor firmware or single-motor (with added features) firmware.
+- 1 or 2 LED output with onboard series resistor
 
 ## Sub-systems and Electronic Module Documentation
 
