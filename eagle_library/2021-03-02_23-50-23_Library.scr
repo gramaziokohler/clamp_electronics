@@ -1,0 +1,127 @@
+# Created by Ultra Librarian Gold 8.3.286 Copyright © 1999-2018
+# Frank Frank, Accelerated Designs
+
+Grid mil;
+Set Wire_Bend 2;
+
+
+Edit 'Multiwatt15_H_STM.pac';
+Change Drill 32;
+Pad '1' Square 0 52 R0 (0 0);
+Change Drill 32;
+Pad '2' Round 0 52 R0 (50 100);
+Change Drill 32;
+Pad '3' Round 0 52 R0 (100 0);
+Change Drill 32;
+Pad '4' Round 0 52 R0 (150 100);
+Change Drill 32;
+Pad '5' Round 0 52 R0 (200 0);
+Change Drill 32;
+Pad '6' Round 0 52 R0 (250 100);
+Change Drill 32;
+Pad '7' Round 0 52 R0 (300 0);
+Change Drill 32;
+Pad '8' Round 0 52 R0 (350 100);
+Change Drill 32;
+Pad '9' Round 0 52 R0 (400 0);
+Change Drill 32;
+Pad '10' Round 0 52 R0 (450 100);
+Change Drill 32;
+Pad '11' Round 0 52 R0 (500 0);
+Change Drill 32;
+Pad '12' Round 0 52 R0 (550 100);
+Change Drill 32;
+Pad '13' Round 0 52 R0 (600 0);
+Change Drill 32;
+Pad '14' Round 0 52 R0 (650 100);
+Change Drill 32;
+Pad '15' Round 0 52 R0 (700 0);
+Layer 1;
+Smd '16' 772 240 -0 R0 (350 793);
+Change Drill 152;
+Pad '17' Round 0 152 R0 (350 798);
+Layer 21;
+Wire 6 (-51 209) (751 209);
+Wire 6 (751 209) (751 918);
+Wire 6 (-51 918) (-51 209);
+Wire 6 (-113 0) -180 (-129 0);
+Wire 6 (-129 0) -180 (-113 0);
+Change Size 50;
+Change Ratio 6;
+Text '>Value' SR0 (282 538);
+Layer 51;
+Wire 6 (-10 0) (10 0);
+Wire 6 (0 -10) (0 10);
+Wire 6 (-46 214) (746 214);
+Wire 6 (746 214) (746 913);
+Wire 6 (746 913) (-46 913);
+Wire 6 (-46 913) (-46 214);
+Wire 0 (-28 224) -180 (-44 224);
+Wire 0 (-44 224) -180 (-28 224);
+Layer 25;
+Change Size 50;
+Change Ratio 6;
+Text '>Name' SR0 (221 538);
+Layer 27;
+
+Edit 'L298HN.sym';
+Layer 94;
+Pin 'CURRENTSENSINGA' Pas None Middle R0 Both 0 (100 0)
+Pin 'OUTPUT1' Out None Middle R0 Both 0 (100 -100)
+Pin 'OUTPUT2' Out None Middle R0 Both 0 (100 -200)
+Pin 'VS' Pwr None Middle R0 Both 0 (100 -300)
+Pin 'INPUT1' In None Middle R0 Both 0 (100 -400)
+Pin 'ENABLEA' In None Middle R0 Both 0 (100 -500)
+Pin 'INPUT2' In None Middle R0 Both 0 (100 -600)
+Pin 'GND' Pwr None Middle R0 Both 0 (100 -700)
+Pin 'VSS' Pwr None Middle R180 Both 0 (3300 -800)
+Pin 'INPUT3' In None Middle R180 Both 0 (3300 -700)
+Pin 'ENABLEB' In None Middle R180 Both 0 (3300 -600)
+Pin 'INPUT4' In None Middle R180 Both 0 (3300 -500)
+Pin 'OUTPUT3' Out None Middle R180 Both 0 (3300 -400)
+Pin 'OUTPUT4' Out None Middle R180 Both 0 (3300 -300)
+Pin 'CURRENTSENSINGB' Pas None Middle R180 Both 0 (3300 -200)
+Pin '16' Pas None Middle R180 Both 0 (3300 -100)
+Pin '17' Pas None Middle R180 Both 0 (3300 0)
+Wire 6 (300 200) (300 -1000);
+Wire 6 (300 -1000) (3100 -1000);
+Wire 6 (3100 -1000) (3100 200);
+Wire 6 (3100 200) (300 200);
+Layer 97;
+Layer 95;
+Change Size 82;
+Change Ratio 6;
+Text '>Name' SR0 (1514 359);
+Layer 96;
+Change Size 82;
+Change Ratio 6;
+Text '>Value' SR0 (1489 259);
+
+Edit 'L298HN.dev';
+Prefix 'CR';
+Description '';
+Value Off;
+Add L298HN 'A' Next  0 (0 0);
+Package 'Multiwatt15_H_STM';
+Technology '';
+Attribute SourceLibrary 'Updates_to_database_2020-11-02';
+Attribute Built_By 'EMA_UL_Team';
+Attribute Manufacturer_Part_Number 'L298HN';
+Attribute Vendor 'STMicroelectronics';
+Connect 'A.CURRENTSENSINGA' '1';
+Connect 'A.OUTPUT1' '2';
+Connect 'A.OUTPUT2' '3';
+Connect 'A.VS' '4';
+Connect 'A.INPUT1' '5';
+Connect 'A.ENABLEA' '6';
+Connect 'A.INPUT2' '7';
+Connect 'A.GND' '8';
+Connect 'A.VSS' '9';
+Connect 'A.INPUT3' '10';
+Connect 'A.ENABLEB' '11';
+Connect 'A.INPUT4' '12';
+Connect 'A.OUTPUT3' '13';
+Connect 'A.OUTPUT4' '14';
+Connect 'A.CURRENTSENSINGB' '15';
+Connect 'A.16' '';
+Connect 'A.17' '17';
