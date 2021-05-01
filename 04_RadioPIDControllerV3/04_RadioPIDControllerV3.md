@@ -41,15 +41,20 @@ This clamp controller can achieve the following goal (with proper firmware):
 
 [Eagle Schematic File](Controller.sch)
 
-![schematic](schematic.jpg)
+![schematic](schematic.png)
 
 ## Board
 
-This board is built on **protoboard**, the following board shows mostly the hard wiring underneath the protoboard. There are jumpers that routes from top side not drawn here.
+This board is built by PCB fab company in China, the following drawing shows bottom side (blue) and top side (red).
 
 [Eagle Board File](Controller.brd)
 
-![board](board.jpg)
+![board](board.png)
+
+## Errata
+
+- **BAT_MON** net should be connected to an Analog Pin on the MCU, but was not connected. This is rectified by jumper wire from trace between R1 R2 to J1 Pin **A3**.
+-  **GD0** net (radio message arrive flag) should be connected to a pin on the MCU, but was not connected. This is rectified by jumper wire from J2 GD0 pin to J1 Pin **A2**.
 
 ## Photo
 
