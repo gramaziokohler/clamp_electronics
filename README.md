@@ -55,6 +55,10 @@ This controller is an improvement of the 02_RadioPIDController with the intent t
 - Ability to support a two-motor firmware or single-motor (with added features) firmware.
 - 1 or 2 LED output with onboard series resistor
 
+### [10_ESP32CAMAdapter](10_ESP32CAMAdapter/10_ESP32CAMAdapter.md)
+
+This an adapter board for connecting AIThinker ESP32-CAM module.
+
 ## Sub-systems and Electronic Module Documentation
 
 ### Motor Driver
