@@ -71,3 +71,15 @@ Arduino Nano and radio module (Blue PCB with antenna) on protoboard. The Motor d
 | Motor Encoder 2               | interrupt (D3)    | gpio (A4, A5)       |
 | Motor Status LED (orange/red) | D6                | not available       |
 
+## Modification
+
+During the third phase of the project the power regulation is modified. The LM7805 is removed and a LM2596 DC-DC converter module is placed in the same role.  This improved the regulation efficiency during standby mode and particularly important with the addition of the ESP32 CAM module. The ESP32 CAM draws substantial current and (confirmed by test) cannot be supported by the 7805, causing it to run into thermal protection. 
+
+| Device                   | Current Draw @14.8V (LM7805) | Current Draw @14.8V (LM2596) |
+| ------------------------ | ---------------------------- | ---------------------------- |
+| Controller with No Radio | 0.055                        | 0.1                          |
+| Controller with Radio    | 0.056                        | 0.116                        |
+| + ESP32 CAM              | 0.1                          | 0.23                         |
+| + ESP32 CAM LED On       | 0.15                         | 0.358                        |
+
+The new LM2596 module is not integrated to the same PCB but is wired off-board and is fixed with foam tape to the side of the worm gearbox.   

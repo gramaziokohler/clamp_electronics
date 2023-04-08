@@ -23,11 +23,13 @@ This clamp controller can achieve the following goal (with proper firmware):
 
 ## Component choice
 
-**Battery Choice:** Up to user (typical: 4-cell Li-Po 1000mAh 4S 75C)
+**Battery Choice:** Up to user (typical: 4-cell Li-Po 1600mAh 4S 75C)
 
 **Radio Choice:** [CC1101 Module](../doc/radio/CC1101_Radio.md)
 
-**Motor Driver Choice:** [Motor Driver XY160D](../doc/motor_driver/motor_driver_XY160D.md)
+**Motor Driver (Main Screw Motor) Choice:** H-Bridge Motor Driver JZ3615 (15A continuous, 50A peak)
+
+**Motor Driver (Pin Gripper Motor) Choice:** [H-Bridge Motor Driver L298HN](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf) (Total 4A continuous)
 
 **MCU Choice:** Arduino Nano (ATMEGA328 with new bootloader)
 
@@ -55,26 +57,25 @@ This board is built by PCB fab company in China, the following drawing shows bot
 
 - **BAT_MON** net should be connected to an Analog Pin on the MCU, but was not connected. This is rectified by jumper wire from trace between R1 R2 to J1 Pin **A3**.
 -  **GD0** net (radio message arrive flag) should be connected to a pin on the MCU, but was not connected. This is rectified by jumper wire from J2 GD0 pin to J1 Pin **A2**.
+-  Two buttons are added for manually controlling the grippers, they are wired to A96 A10 A11 
 
 ## Photo
 
-The Controller in enclosed case with plugged in battery. The disconnected cables goes to DC motor with encoder.
+The Controller in enclosed case with all cables connected.
 
-![Photo_WithCoverTop](Photo_WithCoverTop.jpg)
+![photo_SL1_CoverRemoved](photo_SL1_CoverRemoved.jpg)
 
 ------
 
-Arduino Nano and radio module (Blue PCB with antenna) on protoboard. The Motor driver (red PCB) can be  seen below the protoboard. 
 
-![Photo_OffCover](Photo_OffCover.jpg)
 
 ## Arduino Pin Assignment
 
-|                               | 1 motor operation | 2 motor operation   |
-| ----------------------------- | ----------------- | ------------------- |
-| Homing Switch                 | 1 switch (A1)     | 2 switches (A1, A2) |
-| Gripper Autoswitch            | 1 input (A2)      | not available       |
-| Motor Encoder 1               | interrupt (D2)    | interrupt (D2, D3)  |
-| Motor Encoder 2               | interrupt (D3)    | gpio (A4, A5)       |
-| Motor Status LED (orange/red) | D6                | not available       |
-
+|                 | MA (Screw Motor)       | MB (Gripper Motor)      | MC (Gripper Motor)      |
+| --------------- | ---------------------- | ----------------------- | ----------------------- |
+| Motor IN1       | MA_IN1 (D48)           | MB_IN1 (D40)            | MC_IN1 (D42)            |
+| Motor IN2       | MA_IN2 (D49)           | MB_IN2 (D47)            | MC_IN2 (D43)            |
+| Motor Enable    | MA_ENA (D46)           | MB_ENA (D44)            | MC_ENA (D45)            |
+| Motor Encoder 1 | MA_E1 (D2) interrupt 4 | MB_E1 (D19) interrupt 2 | MC_E1 (D20) interrupt 1 |
+| Motor Encoder 2 | MA_E2 (D3) interrupt 5 | MB_E2 (D21) interrupt 0 | MC_E2 (D18) interrupt 3 |
+| Homing Switch   | nil                    | MB_SW (D39)             | MC_SW(D38)              |
